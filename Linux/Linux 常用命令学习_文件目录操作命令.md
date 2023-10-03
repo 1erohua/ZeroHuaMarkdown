@@ -6,32 +6,32 @@
 
 列出根目录（/）的文件
 
-![image-20230423184425255](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230423184425255.png)
+![image-20230423184425255](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232142.png)
 
 可以和其他参数搭配
 
-![image-20230423184554491](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230423184554491.png)
+![image-20230423184554491](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232143.png)
 
 ### 常用搭配参数
 
 - ls -a 显示所有文件及目录 (**.** 开头的隐藏文件也会列出)
 
-![image-20230423184031143](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230423184031143.png)
+![image-20230423184031143](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232144.png)
 
-- ls -l 以长格式显示当前目录中的文件和目录![image-20230423184827985](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230423184827985.png)
-- ls -d 只列出目录（不递归列出目录内的文件）（有点奇怪，好像很多地方列出目录只有一个.）（存疑）![image-20230423185005948](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230423185005948.png)
-- ls -r 倒序显示文件和目录![image-20230423185132434](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230423185132434.png)
+- ls -l 以长格式显示当前目录中的文件和目录![image-20230423184827985](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232145.png)
+- ls -d 只列出目录（不递归列出目录内的文件）（有点奇怪，好像很多地方列出目录只有一个.）（存疑）![image-20230423185005948](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232146.png)
+- ls -r 倒序显示文件和目录![image-20230423185132434](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232147.png)
 - ls -t 将按照修改时间排序，最新的文件在最前面。
 
-![image-20230423185219727](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230423185219727.png)
+![image-20230423185219727](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232148.png)
 
 - ls -A 在a的基础上不列出 .（当前目录）与 .. （父目录）
 
-![image-20230423185836251](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230423185836251.png)
+![image-20230423185836251](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232149.png)
 
 - ls -R 递归显示目录中的所有文件和子目录（非常恐怖，兄弟）
 
-![image-20230423190831285](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230423190831285.png)
+![image-20230423190831285](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232150.png)
 
 ---
 
@@ -39,17 +39,17 @@
 
 使用格式：cd [dirName]（c盘d盘在mnt，牢记啊）
 
-![image-20230423191044473](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230423191044473.png)
+![image-20230423191044473](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232151.png)
 
 - cd ~ 跳回到自己的home目录
 
-![image-20230423191254211](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230423191254211.png)
+![image-20230423191254211](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232152.png)
 
 - cd .. 跳回到前一层
 
-![image-20230423191428511](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230423191428511.png)
+![image-20230423191428511](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232153.png)
 
-- cd ../..跳回到目录的前两层![image-20230423191538069](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230423191538069.png)
+- cd ../..跳回到目录的前两层![image-20230423191538069](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232154.png)
 
 ---
 
@@ -59,7 +59,7 @@
 
 语法：pwd [--help][--version]
 
-![image-20230423192247328](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230423192247328.png)-L 目录连接链接时，输出连接路径
+![image-20230423192247328](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232155.png)-L 目录连接链接时，输出连接路径
 -P 输出物理路径（好像没体现出区别来)
 
 ---
@@ -72,11 +72,11 @@
 
 当然可以直接mkdir一个
 
-![image-20230423193051983](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230423193051983.png)
+![image-20230423193051983](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232156.png)
 
-- mkdir -v 文件名   //每次创建都显示创建信息![image-20230423193938741](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230423193938741.png)
+- mkdir -v 文件名   //每次创建都显示创建信息![image-20230423193938741](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232158.png)
 
-- mkdir -m  权限数字 文件名 //创建时设定文件权限![image-20230423194233077](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230423194233077.png)
+- mkdir -m  权限数字 文件名 //创建时设定文件权限![image-20230423194233077](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232159.png)
 
 示例为所有用户可读写的权限
 
@@ -103,11 +103,11 @@
 
 #### 删除任何.txt文件，并且删除前逐一询问 rm -i *.txt
 
-![image-20230423195825398](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230423195825398.png)
+![image-20230423195825398](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232160.png)
 
 #### 删除以 “新开头的文件”   rm 新*（*是通配符）
 
-![image-20230423201324804](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230423201324804.png)
+![image-20230423201324804](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232161.png)
 
 ---
 
@@ -121,15 +121,15 @@
 
 #### 展示一下，使用-p删除一个空目录使得父目录为空后也一并删除的操作
 
-首先我们看到这里是ooo下有一个空目录this![image-20230423213015603](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230423213015603.png)
+首先我们看到这里是ooo下有一个空目录this![image-20230423213015603](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232162.png)
 
-我们返沪test界面![image-20230423213044725](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230423213044725.png)
+我们返沪test界面![image-20230423213044725](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232163.png)
 
 然后使用`rmdir -p ooo/this`
 
-![image-20230423213216201](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230423213216201.png)
+![image-20230423213216201](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232164.png)
 
-结果就为ooo也被删除了![image-20230423213315695](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230423213315695.png)
+结果就为ooo也被删除了![image-20230423213315695](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232165.png)
 
 ---
 
@@ -154,35 +154,35 @@
 
 - 给文件/目录改名
 
-<img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424160752585.png" alt="image-20230424160752585" style="zoom:65%;" />
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232166.png" alt="image-20230424160752585" style="zoom:65%;" />
 
 - 移动文件（使用绝对路径会好一些）
 
-![image-20230424161009451](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424161009451.png)
+![image-20230424161009451](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232167.png)
 
 - 移动一个目录到另一个目录
 
-  ![image-20230424161438525](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424161438525.png)
+  ![image-20230424161438525](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232168.png)
 
 - 使用绝对路径移动目录
 
-![image-20230424161606262](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424161606262.png)
+![image-20230424161606262](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232169.png)
 
 - 使用  指令-t进行移动，即目录在前，移动文件在后 
 
-![image-20230424163338132](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424163338132.png)
+![image-20230424163338132](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232170.png)
 
 - 移动当前文件夹下的所有文件到上一级目录 `mv * ../`
 
-![image-20230424163509981](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424163509981.png)
+![image-20230424163509981](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232171.png)
 
 - 将当前文件夹的所有文件移动到另一文件夹 `mv * 目标目录`
 
-  ![image-20230424163715916](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424163715916.png)
+  ![image-20230424163715916](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232172.png)
 
 - 由此衍生，把一个目录的所有文件移动另一个目录去
 
-  ![image-20230424164047726](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424164047726.png)
+  ![image-20230424164047726](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232173.png)
 
 ---
 
@@ -208,15 +208,15 @@
 
 ### 示例
 
-- 创建一个文件（带后缀名）  `touch 文件名1 文件名2 文件名3` ![image-20230424173157625](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424173157625.png)
+- 创建一个文件（带后缀名）  `touch 文件名1 文件名2 文件名3` ![image-20230424173157625](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232174.png)
 
 - 更新时间戳 `touch -r 文件名1 文件名2 ` （以文件名1时间为标准，使文件名2时间与文件名1时间相同）
 
-  ![image-20230424180324277](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424180324277.png)
+  ![image-20230424180324277](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232175.png)
 
 - 指定时间戳 `touch -t 时间序列 文件名`
 
-  ![image-20230424181108750](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424181108750.png) 
+  ![image-20230424181108750](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232176.png) 
 
   ---
 
@@ -260,18 +260,18 @@
 
 #### 使用示例
 
-- `cat 文件名`(展示文件内的信息)![image-20230424191331847](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424191331847.png)
+- `cat 文件名`(展示文件内的信息)![image-20230424191331847](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232177.png)
 
-- ` cat -n 文件1 文件2` 把文件一、二的内容合并并加上行号，然后输出到屏幕上<img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424192548282.png" alt="image-20230424192548282" style="zoom:50%;" />
--  ` cat 文件1 文件2 > 新文件名` 创建一个文件，并将文件一文件二的内容合并到该新文件<img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424194129201.png" alt="image-20230424194129201" style="zoom:50%;" />
+- ` cat -n 文件1 文件2` 把文件一、二的内容合并并加上行号，然后输出到屏幕上<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232178.png" alt="image-20230424192548282" style="zoom:50%;" />
+-  ` cat 文件1 文件2 > 新文件名` 创建一个文件，并将文件一文件二的内容合并到该新文件<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232179.png" alt="image-20230424194129201" style="zoom:50%;" />
 
--  `cat -b 文件1 文件2 > 新文件名` 在上面的基础上添加序号<img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424194239488.png" alt="image-20230424194239488" style="zoom:50%;" />
+-  `cat -b 文件1 文件2 > 新文件名` 在上面的基础上添加序号<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232180.png" alt="image-20230424194239488" style="zoom:50%;" />
 
-- 突发奇想，如果用*.txt呢？（是的，这当然且必须可以）<img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424194714911.png" alt="image-20230424194714911" style="zoom:67%;" />
+- 突发奇想，如果用*.txt呢？（是的，这当然且必须可以）<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232181.png" alt="image-20230424194714911" style="zoom:67%;" />
 
-- 创建文件 并往其中输入信息 `cat >文件名 <<EOF`<img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424195305566.png" alt="image-20230424195305566" style="zoom:50%;" />
+- 创建文件 并往其中输入信息 `cat >文件名 <<EOF`<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232182.png" alt="image-20230424195305566" style="zoom:50%;" />
 
-如果文件名是已存在的，则会进行覆盖并重新<img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424195446400.png" alt="image-20230424195446400" style="zoom:50%;" />
+如果文件名是已存在的，则会进行覆盖并重新<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232183.png" alt="image-20230424195446400" style="zoom:50%;" />
 
 ---
 
@@ -301,15 +301,15 @@
 
   #### 示例
 
-- 以行号显示文件<img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424195806344.png" alt="image-20230424195806344" style="zoom:50%;" />
+- 以行号显示文件<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232184.png" alt="image-20230424195806344" style="zoom:50%;" />
 
-- `-n ln` ：行号在萤幕的最左方显示<img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424200948666.png" alt="image-20230424200948666" style="zoom:50%;" />
+- `-n ln` ：行号在萤幕的最左方显示<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232185.png" alt="image-20230424200948666" style="zoom:50%;" />
 
-- `-n rn` ：行号在自己栏位的最右方显示，且不加 0 <img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424201139221.png" alt="image-20230424201139221" style="zoom:50%;" />
+- `-n rn` ：行号在自己栏位的最右方显示，且不加 0 <img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232186.png" alt="image-20230424201139221" style="zoom:50%;" />
 
-- `-n rz` ：行号在自己栏位的最右方显示，且加 0 <img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424201211434.png" alt="image-20230424201211434" style="zoom:50%;" />
+- `-n rz` ：行号在自己栏位的最右方显示，且加 0 <img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232187.png" alt="image-20230424201211434" style="zoom:50%;" />
 
-- `-n rz -w 3`<img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424201251922.png" alt="image-20230424201251922" style="zoom:50%;" />
+- `-n rz -w 3`<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232188.png" alt="image-20230424201251922" style="zoom:50%;" />
 
 ---
 
@@ -349,14 +349,14 @@
 
 - more文件
 
-![image-20230424203527008](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424203527008.png)
+![image-20230424203527008](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232189.png)
 
 - more +3 文件 （从第三行开始展示）
 - `more +/字串 文件名 ` 从文件中查找第一个出现”`零号`“字符串的行，并从该处前两行开始显示输出
 
-<img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424204642858.png" alt="image-20230424204642858" style="zoom:50%;" />
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232190.png" alt="image-20230424204642858" style="zoom:50%;" />
 
-- `more -n 文件名`设定每行显示行数![image-20230424205132083](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424205132083.png)
+- `more -n 文件名`设定每行显示行数![image-20230424205132083](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232191.png)
 
 - 列一个目录下的文件，由于内容太多，所以应该学会用more来分页显示。这得和管道 | 结合起来
   命令：
@@ -365,7 +365,7 @@
   ls -l  | more -5
   ```
 
-  <img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230424205440642.png" alt="image-20230424205440642" style="zoom:50%;" />
+  <img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232192.png" alt="image-20230424205440642" style="zoom:50%;" />
 
 ---
 
@@ -431,9 +431,9 @@
 
 #### 示例
 
-- 查看当前文件`less 文件名`<img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230425115022014.png" alt="image-20230425115022014" style="zoom:40%;" />
+- 查看当前文件`less 文件名`<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232193.png" alt="image-20230425115022014" style="zoom:40%;" />
 
-<img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230425115048518.png" alt="image-20230425115048518" style="zoom:50%;" />
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232194.png" alt="image-20230425115048518" style="zoom:50%;" />
 
 但退出后是这样的
 
@@ -441,7 +441,7 @@
 
   `ps -ef |less`指令
 
-  <img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230425120357374.png" alt="image-20230425120357374" style="zoom:50%;" />
+  <img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232195.png" alt="image-20230425120357374" style="zoom:50%;" />
 
 - 查看命令历史使用记录并通过`less`分页显示
   命令：
@@ -450,7 +450,7 @@
   history | less
   ```
 
-  <img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230425120251304.png" alt="image-20230425120251304" style="zoom:50%;" />
+  <img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232196.png" alt="image-20230425120251304" style="zoom:50%;" />
 
 - 浏览多个文件 `less 文件名1 文件名2` 
 
@@ -471,13 +471,13 @@
 
 #### 示例
 
-- 显示文件的前n行   `head -n 5 文件名`<img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230425122046237.png" alt="image-20230425122046237" style="zoom:50%;" />
+- 显示文件的前n行   `head -n 5 文件名`<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232197.png" alt="image-20230425122046237" style="zoom:50%;" />
 
-- 显示文件的前n个字节 `head -c 20 文件名`<img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230425122203097.png" alt="image-20230425122203097" style="zoom:50%;" />
+- 显示文件的前n个字节 `head -c 20 文件名`<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232198.png" alt="image-20230425122203097" style="zoom:50%;" />
 
-- 文件的除了最后n个字节以外的内容 `head -c -20 文件名`（注意不是从后显示，因为head只看头，因此负数相当于啥都不看了）<img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230425122340822.png" alt="image-20230425122340822" style="zoom:50%;" />
+- 文件的除了最后n个字节以外的内容 `head -c -20 文件名`（注意不是从后显示，因为head只看头，因此负数相当于啥都不看了）<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232199.png" alt="image-20230425122340822" style="zoom:50%;" />
 
-- 输出文件除了最后n行的全部内容 `head -n -5 文件名`<img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230425122617582.png" alt="image-20230425122617582" style="zoom:50%;" />
+- 输出文件除了最后n行的全部内容 `head -n -5 文件名`<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232200.png" alt="image-20230425122617582" style="zoom:50%;" />
 
 ---
 
@@ -502,13 +502,13 @@
 
 - 显示文件末尾内容（显示文件最后5行）
 
-<img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230425154943129.png" alt="image-20230425154943129" style="zoom:50%;" />
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232201.png" alt="image-20230425154943129" style="zoom:50%;" />
 
-- 循环查看文件内容<img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230425155156312.png" alt="image-20230425155156312" style="zoom:50%;" />
+- 循环查看文件内容<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232202.png" alt="image-20230425155156312" style="zoom:50%;" />
 
 > 说明：该指令常用来监控一个档案、或者ping一个远程主机；使用crtl+c可以退出
 
-- 从第5行开始显示文件 `tail -n +5 test.txt`<img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230425155700345.png" alt="image-20230425155700345" style="zoom:50%;" />
+- 从第5行开始显示文件 `tail -n +5 test.txt`<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232203.png" alt="image-20230425155700345" style="zoom:50%;" />
 
 ---
 
@@ -574,8 +574,8 @@ cp [选项]... -t 目录 源...
 
 #### 示例
 
-- 复制单个文件到目标目录，文件在目标文件中不存在 `cp 文件名 目录`![image-20230425161509472](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230425161509472.png)
+- 复制单个文件到目标目录，文件在目标文件中不存在 `cp 文件名 目录`![image-20230425161509472](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232204.png)
 
 - 复制单个文件到目标目录，文件在目标文件中存在（覆盖式的）（懒得截图了，就是直接覆盖了）
 - 复制整个目录的文件到目标目录
-- ![image-20230425162441990](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230425162441990.png)
+- ![image-20230425162441990](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032232205.png)

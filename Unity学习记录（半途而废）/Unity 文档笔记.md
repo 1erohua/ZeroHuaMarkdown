@@ -327,7 +327,7 @@ cnm，map怎么还有映射的意思
   > | **Axis**                                                     | The axis of a connected device that controls this axis.      |
   > | **JoyNum**                                                   | The connected Joystick that controls this axis. You can select a specific joystick, or query input from all joysticks. |
 
-(这个英语太简单了，我就不讲了)![image-20230520112425139](C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230520112425139.png)
+(这个英语太简单了，我就不讲了)![image-20230520112425139](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032234500.png)
 
 ---
 
@@ -751,7 +751,7 @@ IEnumerator DoCheck()
 
 <img src="https://picx.zhimg.com/80/v2-c339d9c88aa8988a0480365c74bbe1eb_1440w.webp?source=1940ef5c" alt="img" style="zoom:50%;" />
 
-我们可以看出，无论哪种表示方式，记录这样一个变换，**至少需要三个角的sine和cosine值，也就是一共存储6个单位数据**。<img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230827182240728.png" alt="image-20230827182240728" style="zoom:60%;" />
+我们可以看出，无论哪种表示方式，记录这样一个变换，**至少需要三个角的sine和cosine值，也就是一共存储6个单位数据**。<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032234501.png" alt="image-20230827182240728" style="zoom:60%;" />
 
 > 三个基本旋转矩阵
 >
@@ -765,9 +765,9 @@ IEnumerator DoCheck()
 
 这是一个长方体以(30,90,10)旋转得出的结果
 
-<img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230827190901962.png" alt="image-20230827190901962" style="zoom:50%;" />
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032234502.png" alt="image-20230827190901962" style="zoom:50%;" />
 
-然而，这与(20,90,0)的结果是相同的<img src="C:\Users\32620\AppData\Roaming\Typora\typora-user-images\image-20230827191052652.png" alt="image-20230827191052652" style="zoom:50%;" />
+然而，这与(20,90,0)的结果是相同的<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310032234503.png" alt="image-20230827191052652" style="zoom:50%;" />
 
 
 
