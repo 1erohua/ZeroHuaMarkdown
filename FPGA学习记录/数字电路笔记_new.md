@@ -2474,6 +2474,8 @@ SM图采用类似于编写计算机程序时使用的程序流程图的形式
 
 #### 一、同步计数器
 
+同步二进制计算器的含义是：**所有触发器几乎同时翻转（可以看成就是同时翻转的）**
+
 ##### 1. 同步二进制计数器
 
 ###### 1.1 同步二进制加法计数器
@@ -2565,5 +2567,176 @@ SM图采用类似于编写计算机程序时使用的程序流程图的形式
 <img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310160922497.png" alt="image-20231016092203421" style="zoom:67%;" />
 
 > 从T端方式组成的逻辑式子来看，就是把原来的正相接成了反相。
+>
+> 刚刚从十进制那里回头看，只能说千万不要一个个顺推着看，这是时序电路，时钟信号同时到达各个触发器的输入端。
+>
+> 当全员处0000时，即全员处于预备翻转状态，此时当一个时钟信号到达时，所有成员同时翻转。
+>
+> 下面看一个 **错误的** 分析方法：
+> 全员处于0000时，当输入减数信号1时，FF1处于1态，反相输出为0，此时封锁T1、T2和T3，使得FF1到FF3维持原态。（错误！）
+>
+> 错因：分析次态时，不能使用一个触发器的次态分析另一个触发器的次态。而是要用这个触发器的现态去分析另一个触发器的次态。
 
-###### 1.3 加/减计数器
+###### 1.3 加/减计数器![QQ图片20231019153714](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310191537467.png)
+
+**由于右边的连线和结构基本相同（不同在于计数的地方），因此只做一个的分析**
+
+**一、加减法的选择——U'/D 与 S 端口**
+
+> U'/D的端口的输出除了到达CLK0和C/B外，它还以正相以及反相的形式分别进入S'的两个与门
+>
+> 当S' = **0** 时，与S'相连的两个与门，其中一定会有一个是 **0**，另一个是 **1** 。（U'/D是正相和反相分别输入到与门。）
+>
+> 此时再看这两个与门，它们又分别输出到 **或门前面的两个与门**<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310191547676.png" alt="image-20231019154704602" style="zoom:50%;" /> 。
+>
+> 前面我们知道，S'相连的两个与门的输出一定有一个是 **0**，另一个是**1**。因此，这个或门前面的两个与门必定有一个被封锁，另一被启动。
+>
+> 同时，或门前面的两个与门，一个与门的输入端与上一个触发器的 **正相** 输出端相连；另一个与门的输入端则与上一个触发器的 **反相** 输入端相连。
+>
+> 当我需要减法的时候，我就封锁 **与上一个触发器正相输出端相连的与门**；同理，需要加法的时候，切换U'/D，封锁另一个或门前的与门
+
+**二、异步置零/异步置入**
+
+> LD' = **0**时，与触发器S端和R端相连的与门全部解禁，将接受来自 **D0~D3** 的全部输入。
+>
+> 这种状态下，这种置入将无视电路的其他状态，即强制置入，不受其他影响。
+
+**三、使能端S'**
+
+> 对一的分析是基于 S'= **0** 的前提下进行的。那么，当S' = **1** 时，会发生什么呢？
+>
+> 令LD' = **1**,  当S'= **1**，所有T输入前的或门将被封锁，即所有T输入被强制等于 **0**，即保持原态
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310191936420.png" alt="image-20231019193652344" style="zoom:67%;" />
+
+至于CLK0 和 C/B 
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310191940780.png" alt="image-20231019194001704" style="zoom:67%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310191948465.png" alt="image-20231019194813386" style="zoom: 50%;" />
+
+###### 1.4 双时钟的加减法计数器
+
+![image-20231019195348145](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310191953213.png)
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310191957482.png" alt="image-20231019195718405" style="zoom:80%;" />
+
+可以看到这里的T端都是处于1的状态，遇到时钟信号就会进行翻转。
+
+同时，这两个时钟信号还输出到了各个触发器时钟信号入口处的或门的前面的两个与门<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310192003647.png" alt="image-20231019200320952" style="zoom:67%;" />
+
+即当启用一个的时候，另一个功能就会封锁
+
+> 加到CLK0和CLK1上的计数脉冲在时间上应该错开。
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310192010104.png" alt="image-20231019201042035" style="zoom:50%;" />
+
+##### 2. 同步十进制计数器
+
+###### 2.1 同步十进制加法计数器
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310192011506.png" alt="image-20231019201159443" style="zoom:50%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310192036515.png" alt="image-20231019203641432" style="zoom:67%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310192037835.png" alt="image-20231019203708758" style="zoom: 50%;" />
+
+> 说是天才般的设计也不过分！
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310192038922.png" alt="image-20231019203852864" style="zoom:50%;" />
+
+​	<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310192039459.png" alt="image-20231019203914405" style="zoom:50%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310192039797.png" alt="image-20231019203927729" style="zoom:50%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310192042379.png" alt="image-20231019204227300" style="zoom: 67%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310192043268.png" alt="image-20231019204335207" style="zoom: 50%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310192052042.png" alt="image-20231019205224965" style="zoom: 60%;" />
+
+> LD' ：LD' = 0时，处于预置数状态。
+>
+> RD' ：异步置零复位端口
+>
+> D0~D3: 预置输入的输入端
+>
+> EP和ET：EP=0，ET=1时，处于保持态；ET=0时，也处于保持态，且输出C=0.
+
+###### 2.2 同步十进制减法计数器
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310200927200.png" alt="image-20231020092755120" style="zoom:67%;" />
+
+> 按16进制减法器来讲，0000 在末位减去一个1，结果应该是1111；但是我们这里希望的是，减去1之后结果是1001。因此，当处于0000时，Q0到Q3都是0。此时G2输出结果是0，直接封锁了G1和G3的输出，导致T1和T2是0，处于维持态。
+>
+> **此时，G1和G2的输出结果是0，但G4的输出结果是1（FF0到FF2的现态反相输出是1），即FF1和FF现态处于维稳态，FF3处于待翻转状态。当时钟信号同时到达各个触发器时，FF3会立即翻转，而不是等到FF1的反相输出到达之后再做反应，这点分析很重要！**
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310200957574.png" alt="image-20231020095720483" style="zoom:67%;" />
+
+> 注意触发器本身就是存储用的，也就是说，要区分触发器的现态和次态。就比如这里的 **FF3的次态，你不能拿FF1的次态去分析它的次态。你要拿FF1的现态去分析。FF1的次态要到下一个阶段才能用来分析。**
+>
+> FF1的次态相当于是这个时刻的输入状态，下个时刻的输出状态。
+>
+> 好好想想D触发器的主从触发器
+>
+> 当 **时钟信号有效沿 **到达之后，每个触发器都将根据 **输入端**（即上一个触发器的输出的现态）调整自身的输出，即输出 **次态**。然而当 **次态** 到达下个触发器的输入端时，由于时钟信号的原因，**要么下个触发器的入口被封锁了**，**要么下个触发器处理了该状态但出口被封锁了**。
+>
+> 总之，当一个触发器的次态传输到下一个触发器的输入端时，由于具有传输延迟，时钟信号已经让下一个触发器处于封锁（即保持态），次态无法再影响次态了
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310201004035.png" alt="image-20231020100407951" style="zoom:50%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310201004097.png" alt="image-20231020100415029" style="zoom:67%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310201026890.png" alt="image-20231020102609804" style="zoom:50%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310201030382.png" alt="image-20231020103005305" style="zoom:67%;" />
+
+**单时钟同步十进制加/减法计数器**
+
+![image-20231020103118992](https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310201031068.png)
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310201033174.png" alt="image-20231020103310096" style="zoom:67%;" />
+
+#### 二、异步计数器
+
+**异步计数器不是同时翻转的，它是逐位进行的**
+
+##### 1. 异步二进制计数器
+
+**设计思路:**
+
+按照二进制加法计数规则,每一位 如果已经是1，**则再记人1时应变为0，同时向高位发出进位信号，使高位翻转。**若使用下降沿动作的T触发器组成计数器并令T= **1**，则只要**将低位触发器的Q端接至高位触发器的时钟输入端（高位接收到信号就会进行翻转）**就行了。当低位由1变为0时，Q端的下降沿正好可以作为高位的时钟信号。
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310201046209.png" alt="image-20231020104653125" style="zoom: 67%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310201051864.png" alt="image-20231020105113777" style="zoom:67%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310201053243.png" alt="image-20231020105310172" style="zoom:50%;" />
+
+**二进制减法也基本差不多，走个流程就行了**
+
+**<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310201058481.png" alt="image-20231020105817397" style="zoom:67%;" />**
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310201102843.png" alt="image-20231020110229756" style="zoom:50%;" />
+
+##### 2. 异步十进制计数器
+
+异步十进制加法计数器是在4位异步二进制加法计数器的基础上加以修改而得到的。修改时要解决的问题是，**如何使4位二进制计数器在计数过程中跳过从1010到1111这6个状态。**
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310201136127.png" alt="image-20231020113653047" style="zoom:67%;" />
+
+由于这是一个加法电路，并且以正相输出端作为 下个触发器的时钟信号输入，因此判断时钟有效沿为下降沿。
+
+> 我自己按着 **1000到1001再到0000顺序地推了一遍**
+>
+> **Q3Q2Q1Q0为1000时：**时钟信号计入加1，FF0变为输出1态，是上升沿
+>
+> **Q3Q2Q1Q0为1001时**：此时，FF0变为0态，输出结果是Q0=0，是 **下降沿**。因此FF1的有效沿到达。但是，**由于FF3是高电平Q3，即反相输出是0，使得FF1的J口输入端是0，最后导致FF1输出还是0**。由此，FF2处时钟信号保持原态，并使得FF3的 **J口输入也变为了0**，最后FF3也变为了 **输出0**。成功实现从 **1001** 到 **0000** 的转变。
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310201201033.png" alt="image-20231020120135957" style="zoom: 67%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310201202693.png" alt="image-20231020120209624" style="zoom:67%;" />
+
+> 所以我觉得设计得很妙的地方在于FF1加了一个Q3的反相输入端进来。
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310201203403.png" alt="image-20231020120304323" style="zoom:67%;" />
