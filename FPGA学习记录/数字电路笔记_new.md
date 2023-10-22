@@ -36,9 +36,9 @@
 
 
 
-8421码，也被称为BCD码，是十进制代码中最常用的一种12。在这种编码方式中，每一位二值代码的“1”都代表一个固定数值12。这个固定数值就是这一位的权12。
+8421码，也被称为BCD码，是十进制代码中最常用的一种。在这种编码方式中，每一位二值代码的“1”都代表一个固定数值。这个固定数值就是这一位的权。
 
-8421代表的是权值分配3。代码中从左至右看每一位“1”分别代表数字“8”“4”“2”“1”，故得名8421码12。例如，二进制数1001在8421码中表示的就是十进制数9（8+0+0+1=9）4。
+8421代表的是权值分配。代码中从左至右看每一位“1”分别代表数字“8”“4”“2”“1”，故得名8421码12。例如，二进制数1001在8421码中表示的就是十进制数9（8+0+0+1=9）4。
 
 因为每位的权都是固定不变的，所以8421码是恒权码12。这意味着无论在何种情况下，每一位的权都不会改变。例如，在8421码中，最左边的位总是代表8，无论其他位是什么
 
@@ -3150,3 +3150,166 @@ SM图采用类似于编写计算机程序时使用的程序流程图的形式
 <img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310212130455.png" alt="image-20231021213039387" style="zoom: 67%;" />
 
 <img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310212131154.png" alt="image-20231021213149086" style="zoom:50%;" />
+
+### 6.4.2 时序逻辑电路的自启动设计
+
+在前面介绍时序电路的设计步骤时,**检查电路能否自启动这一步是在最后进行的**。如果发现电路不能自启动,而设计又要求电路能自启动,就必须回过头来重新修改设计了。那么能否**在前面的设计过程中就注意到电路能否自启动,并且在发现不能自启动时采取措施加以解决呢?**
+**事实上这是可以做到的，**下面通过一个例子来说明。
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310220941869.png" alt="image-20231022094146795" style="zoom:60%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310220943419.png" alt="image-20231022094318346" style="zoom:50%;" />
+
+> 这里它已经给出了编码。
+>
+> 由于计数器是一位一位来，所以它的次态和现态很容易关联起来
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221004941.png" alt="image-20231022100401849" style="zoom:50%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221004330.png" alt="image-20231022100458260" style="zoom:50%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221006267.png" alt="image-20231022100625181" style="zoom:50%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221007238.png" alt="image-20231022100706131" style="zoom: 50%;" />
+
+> 这一步的关键在于，**如何利用任意项 为 无效状态 指定一个 有效的次态**
+>
+> 也就是说，要适当的 **画卡诺图的圈时把 叉号带上**
+
+> 后面那部分不再赘述
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221016633.png" alt="image-20231022101642537" style="zoom: 67%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221018500.png" alt="image-20231022101835431" style="zoom: 67%;" />
+
+> 在只考虑状态方程最简化的情况下，将得到以下的 图和表以及公式	
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221020990.png" alt="image-20231022102036913" style="zoom:50%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221023986.png" alt="image-20231022102348897" style="zoom:50%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221027025.png" alt="image-20231022102757927" style="zoom: 67%;" />
+
+> 突然想明白了
+>
+> 我们首先得到的是<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221028665.png" alt="image-20231022102824601" style="zoom: 67%;" />是这样的一个卡诺图。
+>
+> 然而只要卡诺图的结果写出来，就能得到一个（可连接的结果）
+>
+> **在不考虑连接简便情况下，其实只要把xxx都填成有效状态中的任意一个就好。**
+>
+> **这道题的做法，是先考虑最简便的情况，看最简便的情况是否能做到自启动**
+>
+> **如果做不到自启动，再根据实际情况（比如这里只改Q1），做最少的变动，让XXX都变为有效状态（直接）或者能变成有效状态的无效状态（间接）**
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221033440.png" alt="image-20231022103343344" style="zoom: 67%;" />
+
+### 6.4.3 异步时序逻辑电路的设计方法
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221046492.png" alt="image-20231022104648402" style="zoom: 67%;" />
+
+> 这个就随便看看吧
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221049956.png" alt="image-20231022104906879" style="zoom:50%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221050096.png" alt="image-20231022105059013" style="zoom:50%;" />
+
+> 所谓8421，就是每一位对应的二进值。比如说，1010，4号位和2号位上有1，那么就8+2，那就是10；
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221053378.png" alt="image-20231022105340304" style="zoom: 67%;" />
+
+> 在选用JK触发器时，可由状态图画出时序图（时钟下降沿）
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221058616.png" alt="image-20231022105845542" style="zoom: 67%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221055519.png" alt="image-20231022105529440" style="zoom: 67%;" />
+
+> 也就是说，**触发器翻转时必须有高低电平的变化与更替**
+>
+> 另外，**触发器不需要翻转的时候，尽量不要有时钟信号， 不然就要电路结构复杂来过滤掉不需要的时钟信号了。**
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221103465.png" alt="image-20231022110348388" style="zoom: 67%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221104063.png" alt="image-20231022110406992" style="zoom:50%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221104256.png" alt="image-20231022110414170" style="zoom:50%;" />
+
+> 才注意到是减法计数器。。。
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221106512.png" alt="image-20231022110655421" style="zoom:50%;" />
+
+> 到此为止吧，接着下去就没有意义了
+
+### 6.4.4 复杂时序逻辑电路的设计
+
+> 这个也是随便看看图一乐
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221109569.png" alt="image-20231022110901439" style="zoom:50%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221109816.png" alt="image-20231022110924726" style="zoom:50%;" />
+
+**例题**
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221110045.png" alt="image-20231022111002977" style="zoom: 67%;" />
+
+> 我的设想是，首先无论怎么样都要有一个 **译码器**，然后再有一个 **加/减法器**，并且**进位输出**（输出火柴盒），找钱肯定是要计算的。
+>
+> 其次由于是一次次投入，那肯定是要有 **时序存储**，由于状态有8个，那就用 **3个触发器**。（触发器的做法可以仿照自动售饮料机的方法来。）
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221119013.png" alt="image-20231022111923931" style="zoom:67%;" />
+
+> 是我没有仔细想。。。结果只有三种情况，可能列一遍下来其实就知道是怎么回事了。我以为全部都可能会有。。。
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221120429.png" alt="image-20231022112025334" style="zoom:50%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221120636.png" alt="image-20231022112050552" style="zoom:50%;" />
+
+> 但从结果上来说还是需要加法器。
+>
+> 而且我居然还忘了异步置零这种重要的东西
+>
+> 时钟操作信号也很重要。
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221124652.png" alt="image-20231022112422549" style="zoom:50%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221122801.png" alt="image-20231022112227696" style="zoom: 67%;" />
+
+### 6.4.6 时序逻辑电路中的竞争-冒险现象
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221128936.png" alt="image-20231022112805845" style="zoom:50%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221130498.png" alt="image-20231022113008403" style="zoom:50%;" />
+
+> 画红色线的那句话才是关键
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221133902.png" alt="image-20231022113301803" style="zoom: 67%;" />
+
+> 到底是时钟信号先到还是输入信号先到？这就是问题所在。
+>
+> 这里这段话的“如果”阐述的是，时钟信号落后于输入信号到达，是我们需要的
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221134456.png" alt="image-20231022113442384" style="zoom:67%;" />
+
+> 但是如果是输入信号先到达，就会出现下面的情况
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221136423.png" alt="image-20231022113631315" style="zoom:50%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221136966.png" alt="image-20231022113659902" style="zoom: 67%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221137216.png" alt="image-20231022113725137" style="zoom:50%;" />
+
+> 这里摊牌了，大部分的双反相器其实都是为了延时使用的
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221138125.png" alt="image-20231022113821044" style="zoom:50%;" />
+
+> 虽然是同一个时钟，但是时钟到达各个触发器时未必是共同的时间
+>
+> 相当于上头给5个人发了同等的钱，让他们找人盖房子。实际上最后分给工人的钱基本都不会相同。有可能第一个人自己多拿了点，第二个人自己没拿，第三个人还倒贴了钱进去。
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221140824.png" alt="image-20231022114023747" style="zoom: 67%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221140151.png" alt="image-20231022114048090" style="zoom: 67%;" />
+
+<img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202310221141640.png" alt="image-20231022114104567" style="zoom:67%;" />
+
+> 其实很简单，就是你延迟了多久，大家一起延迟就好了
