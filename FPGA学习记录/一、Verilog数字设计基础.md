@@ -1276,7 +1276,7 @@ always @(sl or a or b) // 表示只要 sl 或 a 或 b 其中若有一个变化�
 
 <img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202311130934432.png" alt="image-20231113093438369" style="zoom:50%;" />
 
-### 7.7.2 ”文件包含“ 处理 `define
+### 7.7.2 ”文件包含“ 处理 `include
 
 <img src="https://gitee.com/zero_hua_no_sb/blog-pic/raw/master/202311131154467.png" alt="image-20231113115150838" style="zoom:50%;" />
 
