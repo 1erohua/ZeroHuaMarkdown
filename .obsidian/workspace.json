@@ -1,0 +1,259 @@
+{
+  "main": {
+    "id": "19d26f95d6949b7e",
+    "type": "split",
+    "children": [
+      {
+        "id": "31de602ed7129c66",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "323b222b7e79593a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          },
+          {
+            "id": "294f645e5aec1662",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "C++/我的探索/Ffmpeg/FFmpeg libav tutorial/2、臭名昭著的Helloworld.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2、臭名昭著的Helloworld"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f5be87e4818a91c7",
+    "type": "split",
+    "children": [
+      {
+        "id": "6fc8a9ea24d6d1fa",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "372fe4f172b5be6d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byModifiedTime",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "0534a67f67ddc294",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "解复用",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "a6abd1aa89d9be69",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 297.5
+  },
+  "right": {
+    "id": "7999d3a67fc4b102",
+    "type": "split",
+    "children": [
+      {
+        "id": "eb7891f2e9a53b1d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cd7f711970e91ac8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "riscv.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "riscv 的反向链接列表"
+            }
+          },
+          {
+            "id": "1c5dd7e2f03553bc",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "C++/我的探索/Andorid_Studio/基本类型数组.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "基本类型数组 的出链列表"
+            }
+          },
+          {
+            "id": "4a26d0abd2454ba1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "4f09124c6f5a1c26",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md",
+                "followCursor": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "README 的大纲"
+            }
+          },
+          {
+            "id": "6fb26afd9d93e8b9",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "插件不再活动"
+            }
+          },
+          {
+            "id": "565ceb3f9d4d4c21",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "插件不再活动"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 276.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "publish:发布更改": false,
+      "remotely-save:Remotely Save": false,
+      "copilot:Open Copilot Chat": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "323b222b7e79593a",
+  "lastOpenFiles": [
+    "C++/我的探索/Ffmpeg/Ffmpeg函数、结构体的一些记录/FFmpeg 核心结构体文档.md",
+    "README.md",
+    "C++/我的探索/Ffmpeg/Ffmpeg函数、结构体的一些记录/FFmpeg核心函数文档.md",
+    "C++/我的探索/Ffmpeg/FFmpeg libav tutorial/2、臭名昭著的Helloworld.md",
+    "C++/我的探索/Ffmpeg/Ffmpeg函数、结构体的一些记录/avcodec_send_packet 与 avcode_receive_frame.md",
+    "C++/我的探索/Ffmpeg/Ffmpeg函数、结构体的一些记录/av_packet_unref与av_frame_unref.md",
+    "C++/我的探索/Ffmpeg/Ffmpeg函数、结构体的一些记录/AVERROR(EAGAIN).md",
+    "C++/我的探索/Ffmpeg/FFmpeg libav tutorial/4、重新封装.md",
+    "C++/我的探索/learn_from_zeck/C++多线程/十四、基于锁实现的线程安全的队列和栈.md",
+    "C++/我的探索/learn_from_zeck/C++多线程/十一、原子操作和内存模型.md",
+    "C++/我的探索/learn_from_zeck/C++多线程/十、thread、async源码解析.md",
+    "C++/我的探索/learn_from_zeck/C++多线程/八、并行与函数式编程.md",
+    "C++/我的探索/learn_from_zeck/C++多线程/六、利用条件变量构造线程安全队列.md",
+    "C++/我的探索/learn_from_zeck/C++多线程/一、C++线程基础.md",
+    "C++/我的探索/learn_from_zeck/C++多线程/十二、无锁并发队列.md",
+    "C++/我的探索/learn_from_zeck/C++多线程/九、Actor和CSP设计模式.md",
+    "C++/我的探索/learn_from_zeck/C++多线程/五、线程安全的单例模式.md",
+    "C++/我的探索/learn_from_zeck/C++多线程/二、C++线程管控.md",
+    "C++/我的探索/learn_from_zeck/C++多线程/十五、自我实现线程安全的数据结构.md",
+    "C++/我的探索/learn_from_zeck/C++多线程/十六、接下来应该学习的东西.md",
+    "C++/我的探索/learn_from_zeck/C++多线程/零、多进程.md",
+    "C++/我的探索/Ffmpeg/Ffmpeg函数、结构体的一些记录/AVPacket和AVFrame.md",
+    "C++/我的探索/Ffmpeg/Ffmpeg函数、结构体的一些记录/初始化解编码器的关键操作——avcodec_open2().md",
+    "C++/我的探索/Ffmpeg/FFmpeg libav tutorial/3、音视频同步.md",
+    "C++/我的探索/Ffmpeg/FFmpeg libav tutorial",
+    "C++/我的探索/Ffmpeg/Ffmpeg的编译-Android.md",
+    "C++/我的探索/Andorid_Studio/交叉编译的CMake与Shell脚本.md",
+    "C++/我的探索/Ffmpeg/Ffmpeg函数、结构体的一些记录/未命名",
+    "C++/我的探索/Ffmpeg/Ffmpeg函数、结构体的一些记录",
+    "Pasted image 20250209154627.png",
+    "C++/我的探索/CMake/djj的笔记/PropertySheet.props",
+    "C++/我的探索/CMake/djj的笔记/assets/image-20241211001313190.png",
+    "C++/我的探索/CMake/djj的笔记/assets/image-20241211001257484.png",
+    "C++/我的探索/CMake/djj的笔记/assets/image-20241211001137503.png",
+    "C++/我的探索/CMake/djj的笔记/assets",
+    "C++/我的探索/CMake/djj的笔记",
+    "C++/我的探索/Cmakelist/未命名",
+    "C++/我的探索/CMake",
+    "Pasted image 20250207221859.png",
+    "Pasted image 20250207090939.png",
+    "Pasted image 20250207090235.png",
+    "Pasted image 20250207090147.png",
+    "C++/我的探索/Ffmpeg",
+    "Pasted image 20250205163836.png",
+    "Pasted image 20250205162002.png",
+    "C++/我的探索/Beej's Guide to Network Programming/7、高级技巧",
+    "未命名.canvas",
+    "C++/未命名.canvas",
+    "未命名 1.canvas"
+  ]
+}
